@@ -57,11 +57,13 @@ p {
   text-wrap: pretty;
    display: flex;
   justify-content: center;
+  margin: 0 auto;
   font-family: 'Noto Serif';
   font-style: italic;
   font-weight: bold;
   font-size: 2rem;
   color:rgb(30, 80, 122);
+  padding: 5px;
 }
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
@@ -79,15 +81,16 @@ h1, h2, h3, h4, h5, h6 {
 form {
   background-color: #ddd;
  color: rgb(69, 137, 156);
-  padding:3vw 20vw;
+  padding:3vw 13vw;
   font-weight: bold;
   font-size: 1.5rem;
   margin-top: 100px;
+  box-shadow: 0 0 10px rgba(11, 11, 11, 0.3);
 }
 
 .items{
   display: flex;
-  justify-content: center;
+  justify-content: right;
   font-family: 'Noto Serif';
   font-style: normal;
 }
@@ -108,11 +111,44 @@ button{
   background-color: rgb(88, 188, 188);
   color: white;
   cursor: pointer;
-  margin: 25px 50px;
+  margin-left: 10rem;;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s ease;
 }
 
 button:hover,
 button:focus{
   background-color:rgb(27, 74, 100);
   color: blanchedalmond;
+}
+
+.logo {
+  width: 150px;   
+  height: auto;
+  opacity: 0;
+  border-radius: 50px;
+ display: flex;
+  justify-content: right;
+  margin:0 auto; 
+
+}
+
+input {
+  border: 2px solid lightgray;
+  padding: 8px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border: 2px solid blue;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.3);
+  outline: none;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border: 2px solid red;
+}
+
+input:valid:not(:placeholder-shown) {
+  border: 2px solid black;
 }
